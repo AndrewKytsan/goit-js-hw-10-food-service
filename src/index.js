@@ -36,4 +36,4 @@ if (localStorage.getItem('Theme') === 'DARK') {
 function CreateMenu(menu) {
   return menu.map(foodCard).join ('')
 }
-refs.menu.insertAdjacentHTML('beforeend',CreateMenu(menu))
+refs.menuList.insertAdjacentHTML('beforeend',CreateMenu(menu))
