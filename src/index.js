@@ -18,13 +18,11 @@ function changeTheme() {
   if (refs.themeSwitchToggle.checked === true) {
     refs.body.classList.remove('light-theme')
     refs.body.classList.add('dark-theme')
-    localStorage.removeItem('Theme')
     localStorage.setItem('Theme', 'DARK')
   }
   else {
     refs.body.classList.remove('dark-theme')
     refs.body.classList.add('light-theme')
-    localStorage.removeItem('Theme')
     localStorage.setItem('Theme', 'LIGHT')
 
   }
@@ -34,8 +32,6 @@ if (localStorage.getItem('Theme') === 'DARK') {
   refs.themeSwitchToggle.checked = true;
   refs.body.classList.add('dark-theme')
 }
-
-
 
 function CreateMenu(menu) {
   return menu.map(foodCard).join ('')
